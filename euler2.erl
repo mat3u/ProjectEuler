@@ -1,4 +1,7 @@
 -module(euler2).
+-author("Matt Stasch").
+
+-import(common, [fib/1]).
 -export([run/0]).
 
 run() -> run(1, 0).
@@ -10,7 +13,3 @@ fib_even(X) -> fib_even(X, fib(X)).
 
 fib_even(X, F) when F rem 2 == 0 -> F;
 fib_even(X, _) -> 0.
-
-fib(1) -> 1;
-fib(2) -> 2;
-fib(N) -> fib(N-1) + fib(N-2).
